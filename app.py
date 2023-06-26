@@ -20,7 +20,7 @@ def main():
 
             # Generate the summary
             # summary_ids = model.generate(inputs["input_ids"], num_beams=4, max_length=150, early_stopping=True)
-            summary_ids = model.generate(inputs.input_ids, num_beams=4, max_length=150, early_stopping=True)
+            summary_ids = model.generate(inputs, num_beams=4, max_length=150, early_stopping=True)
             summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
 
             # Display the summary
